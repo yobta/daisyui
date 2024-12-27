@@ -1,9 +1,7 @@
+import * as styles from 'bundle-text:./colors.components.css'
+
 import plugin from 'tailwindcss/plugin'
 
-import { loadStyles } from '../_util/loadStyles.ts'
-
 export const colorsPlugin = plugin(async ({ addComponents }) => {
-  const styles = await loadStyles('/colorPreset/colors.components.css')
-
   addComponents(styles)
 })

@@ -9,9 +9,8 @@ export default new Transformer({
     }
 
     const cssContent = await asset.getCode()
-    const processed = parse(cssContent)
+    const processed = parse(cssContent, { from: asset.filePath })
     const cssInJs = objectify(processed)
-
     asset.type = 'js'
     asset.setCode(`export default ${JSON.stringify(cssInJs, null, 2)};`)
 

@@ -1,4 +1,4 @@
-import * as styles from './Badge.components.css'
+import * as styles from 'bundle-text:./Badge.components.css'
 
 import plugin from 'tailwindcss/plugin'
 

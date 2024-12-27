@@ -1,4 +1,13 @@
 {
   "extends": "@parcel/config-default",
-  "bundler": "@parcel/bundler-library"
+  "bundler": "@parcel/bundler-library",
+  "transformers": {
+    "*.css": [
+      "@parcel/transformer-postcss"
+    ],
+    "bundle-text:*": [
+      "...",
+      "@parcel/transformer-postcss"
+    ]
+  }
 }

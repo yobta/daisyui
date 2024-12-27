@@ -26,47 +26,43 @@
   "targets": {
     "main": {
       "context": "node",
-      "includeNodeModules": true,
+      "includeNodeModules": false,
       "optimize": false,
       "outputFormat": "esmodule",
-      "isLibrary": true,
+      "isLibrary": false,
       "distDir": "./dist",
       "source": "./src/index.ts"
     }
   },
   "devDependencies": {
-    "@monial/ui/parcel-transformer-css-in-js": "file:./src/_util/cssInJsTransformer.js",
     "@logux/eslint-config": "^53.5.1",
     "@parcel/bundler-library": "^2.13.3",
     "@parcel/config-default": "^2.13.3",
     "@parcel/packager-ts": "2.13.3",
     "@parcel/plugin": "^2.13.3",
+    "@parcel/transformer-css": "^2.13.3",
     "@parcel/transformer-inline-string": "2.13.3",
+    "@parcel/transformer-postcss": "^2.13.3",
     "@parcel/transformer-typescript-types": "2.13.3",
-    "@tailwindcss/typography": "^0.5.15",
     "@types/node": "^22.10.2",
     "@types/postcss-js": "^4.0.4",
     "autoprefixer": "^10.4.20",
     "eslint": "^9.17.0",
     "globals": "^15.14.0",
     "parcel": "^2.13.3",
+    "parcel-resolver-default": "^0.0.0",
     "postcss": "^8.4.49",
     "postcss-import": "^16.1.0",
     "postcss-js": "^4.0.1",
-    "tailwindcss": "^3.4.17",
     "typescript": "^5.7.2"
   },
   "alias": {
     "culori/require": "culori"
   },
   "dependencies": {
-    "daisyui": "^4.12.23"
-  },
-  "parcel": {
-    "transformers": {
-      "*.css": [
-        "@monial/ui/parcel-transformer-css-in-js"
-      ]
-    }
+    "@tailwindcss/typography": "^0.5.15",
+    "culori": "^4.0.1",
+    "daisyui": "^4.12.23",
+    "tailwindcss": "^3.4.17"
   }
 }
