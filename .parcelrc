@@ -3,11 +3,7 @@
   "bundler": "@parcel/bundler-library",
   "transformers": {
     "*.css": [
-      "@parcel/transformer-postcss"
-    ],
-    "bundle-text:*": [
-      "...",
-      "@parcel/transformer-postcss"
+      "@parcel/transformer-inline-string"
     ]
   }
 }

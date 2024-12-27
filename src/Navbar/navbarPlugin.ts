@@ -1,7 +1,11 @@
-import * as styles from 'bundle-text:./Navbar.components.css'
+import styles from 'bundle-text:./Navbar.components.css'
 
 import plugin from 'tailwindcss/plugin'
 
-export const navbarPlugin = plugin(async ({ addComponents }) => {
-  addComponents(styles)
+import { cssInJs } from '../_util/cssInJs.ts'
+
+export const navbarPlugin = plugin(({ addComponents }) => {
+  const components = cssInJs(styles)
+
+  addComponents(components)
 })

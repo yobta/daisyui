@@ -2,15 +2,11 @@
   "name": "@monial/ui",
   "version": "0.0.1",
   "description": "",
-  "main": "dist/index.js",
-  "module": "src/index.js",
-  "source": "src/index.ts",
-  "types": "dist/types.d.ts",
   "engines": {
     "node": ">=22"
   },
   "scripts": {
-    "clear": "rm -rf dist",
+    "clear": "rm -rf dist && rm -rf .parcel-cache",
     "lint": "eslint 'src/**/*.{ts,tsx}'",
     "lint-fix": "eslint 'src/**/*.{ts,tsx}' --fix",
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -18,18 +14,26 @@
     "watch": "parcel watch",
     "prebuild": "npm run clear",
     "build": "parcel build",
+    "predev": "npm run clear",
     "dev": "parcel watch src/index.ts src/**/*.css"
   },
   "author": "",
   "license": "ISC",
+  "module": "dist/index.js",
   "type": "module",
+  "types": "dist/types.d.ts",
+  "exports": {
+    ".": "./dist/index.js",
+    "./package.json": "./package.json"
+  },
+  "sideEffects": false,
   "targets": {
-    "main": {
+    "module": {
       "context": "node",
       "includeNodeModules": false,
       "optimize": false,
       "outputFormat": "esmodule",
-      "isLibrary": false,
+      "isLibrary": true,
       "distDir": "./dist",
       "source": "./src/index.ts"
     }
@@ -51,9 +55,7 @@
     "globals": "^15.14.0",
     "parcel": "^2.13.3",
     "parcel-resolver-default": "^0.0.0",
-    "postcss": "^8.4.49",
     "postcss-import": "^16.1.0",
-    "postcss-js": "^4.0.1",
     "typescript": "^5.7.2"
   },
   "alias": {
@@ -63,6 +65,8 @@
     "@tailwindcss/typography": "^0.5.15",
     "culori": "^4.0.1",
     "daisyui": "^4.12.23",
+    "postcss": "^8.4.49",
+    "postcss-js": "^4.0.1",
     "tailwindcss": "^3.4.17"
   }
 }

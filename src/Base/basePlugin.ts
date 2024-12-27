@@ -1,7 +1,11 @@
-import * as styles from 'bundle-text:./Base.base.css'
+import styles from 'bundle-text:./Base.base.css'
 
 import plugin from 'tailwindcss/plugin'
 
-export const basePlugin = plugin(async ({ addBase }) => {
-  addBase(styles)
+import { cssInJs } from '../_util/cssInJs.ts'
+
+export const basePlugin = plugin(({ addBase }) => {
+  const components = cssInJs(styles)
+
+  addBase(components)
 })

@@ -1,7 +1,11 @@
-import * as styles from 'bundle-text:./Progress.components.css'
+import styles from 'bundle-text:./Progress.components.css'
 
 import plugin from 'tailwindcss/plugin'
 
-export const progressPlugin = plugin(async ({ addComponents }) => {
-  addComponents(styles)
+import { cssInJs } from '../_util/cssInJs.ts'
+
+export const progressPlugin = plugin(({ addComponents }) => {
+  const components = cssInJs(styles)
+
+  addComponents(components)
 })

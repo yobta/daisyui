@@ -1,7 +1,11 @@
-import * as styles from 'bundle-text:./Link.components.css'
+import styles from 'bundle-text:./Link.components.css'
 
 import plugin from 'tailwindcss/plugin'
 
-export const linkPlugin = plugin(async ({ addComponents }) => {
-  addComponents(styles)
+import { cssInJs } from '../_util/cssInJs.ts'
+
+export const linkPlugin = plugin(({ addComponents }) => {
+  const components = cssInJs(styles)
+
+  addComponents(components)
 })

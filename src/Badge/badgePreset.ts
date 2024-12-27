@@ -4,7 +4,4 @@ import { badgePlugin } from './badgePlugin.ts'
 
 export const badgePreset: Partial<Config> = {
   plugins: [badgePlugin],
-  theme: {
-    extend: {},
-  },
 }

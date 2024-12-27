@@ -1,7 +1,11 @@
-import * as styles from 'bundle-text:./Card.components.css'
+import styles from 'bundle-text:./Card.components.css'
 
 import plugin from 'tailwindcss/plugin'
 
-export const cardPlugin = plugin(async ({ addComponents }) => {
-  addComponents(styles)
+import { cssInJs } from '../_util/cssInJs.ts'
+
+export const cardPlugin = plugin(({ addComponents }) => {
+  const components = cssInJs(styles)
+
+  addComponents(components)
 })

@@ -1,7 +1,11 @@
-import * as styles from 'bundle-text:./colors.components.css'
+import styles from 'bundle-text:./colors.components.css'
 
 import plugin from 'tailwindcss/plugin'
 
-export const colorsPlugin = plugin(async ({ addComponents }) => {
-  addComponents(styles)
+import { cssInJs } from '../_util/cssInJs.ts'
+
+export const colorsPlugin = plugin(({ addComponents }) => {
+  const components = cssInJs(styles)
+
+  addComponents(components)
 })
