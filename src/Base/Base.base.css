@@ -1,0 +1,7 @@
+body {
+  @apply bg-paper;
+}
+
+.disabled {
+  @apply pointer-events-none opacity-40 p-2;
+}

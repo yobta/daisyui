@@ -1,0 +1,21 @@
+{
+  "declaration": true,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "allowImportingTsExtensions": true,
+    "esModuleInterop": true,
+    "emitDeclarationOnly": true,
+    "declaration": true,
+    "module": "ESNext",
+    "target": "es2017",
+    "lib": ["DOM", "ES6", "ES2017"],
+    "strict": true,
+    "moduleResolution": "node",
+    "strictNullChecks": true,
+    "resolveJsonModule": true,
+    "noImplicitAny": true,
+    "sourceMap": true
+  },
+  "include": ["./src/**/*"],
+  "exclude": ["node_modules", "dist"]
+}

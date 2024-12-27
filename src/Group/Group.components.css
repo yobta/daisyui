@@ -1,0 +1,144 @@
+:root {
+  --gap-group: 0.5rem;
+  --gap-group-md: 0.5rem;
+  --gap-group-lg: 0.75rem;
+  --gap-group-sm: 0.25rem;
+  --gap-group-xs: 0.125rem;
+
+  --padding-group: 1rem;
+  --padding-group-md: 1rem;
+  --padding-group-lg: 1.25rem;
+  --padding-group-sm: 0.75rem;
+  --padding-group-xs: 0.5rem;
+
+  --spacing-group: 0.5px;
+}
+
+.group {
+  @apply grid;
+}
+
+/* NOTE: Specificity hack: .group.group  */
+.group.group > * {
+  @apply rounded-none;
+}
+
+/* #region: Colors */
+.group-paper > * {
+  @apply bg-paper;
+}
+.group-paper-2 > * {
+  @apply bg-paper-2;
+}
+.group-paper-3 > * {
+  @apply bg-paper-3;
+}
+.group-primary > * {
+  @apply bg-primary;
+}
+.group-secondary > * {
+  @apply bg-secondary;
+}
+/* #endregion */
+
+.group-separator,
+.group > [role='separator'] {
+  height: var(--spacing-group);
+  width: var(--padding-group);
+}
+
+/* #region: Roundings */
+.group-rounded {
+  @apply rounded-box;
+  & > :only-child {
+    @apply rounded-inherit;
+  }
+  & > :first-child:not(:only-child) {
+    @apply rounded-t-inherit;
+  }
+  & > :last-child:not(:only-child) {
+    @apply rounded-b-inherit;
+  }
+}
+
+/* #endregion: Roundings */
+
+/* 
+.group > :first-child,
+.action-group > :first-child {
+  @apply rounded-t-inherit;
+}
+
+.group > :last-child,
+.action-group > :last-child {
+  @apply rounded-b-inherit;
+}
+
+.group-outlined {
+  @apply p-group-gap bg-ink bg-opacity-30;
+}
+
+.group-separator {
+  @apply block w-4 select-none pointer-events-none;
+  height: var(--group-gap);
+  margin-top: calc(-1 * var(--group-gap));
+}
+.group-separator ~ * {
+  margin-top: calc(-1 * var(--group-gap));
+}
+
+.group-header,
+.group > header,
+.action-group > header {
+  @apply text-center py-[0.525rem];
+}
+
+.group-title {
+  @apply text-group-title leading-group-title font-semibold;
+}
+
+.group-subtitle {
+  @apply text-group-subtitle leading-group-subtitle font-light;
+}
+
+.group-body {
+  @apply p-4;
+}
+
+.group-paper > * {
+  @apply bg-paper;
+}
+.group-paper-2 > * {
+  @apply bg-paper-2;
+}
+.group-paper-3 > * {
+  @apply bg-paper-3;
+}
+.group-primary > * {
+  @apply bg-primary;
+}
+
+.group-row {
+  @apply flex flex-row;
+}
+.group-secondary > * {
+  @apply bg-secondary;
+}
+.group-accent > * {
+  @apply bg-accent;
+}
+.group-neutral > * {
+  @apply bg-neutral;
+}
+.group-info > * {
+  @apply bg-info;
+}
+.group-warning > * {
+  @apply bg-warning;
+}
+.group-error > * {
+  @apply bg-error;
+}
+.group-success > * {
+  @apply bg-success;
+} */

@@ -1,0 +1,17 @@
+node_modules
+src
+
+.editorconfig
+.env
+.gitignore
+.parcelrc
+.parcel-cache
+.prettierignore
+.prettierrc.yaml
+.tool-versions
+eslint.config.js
+makefile
+pnpm-lock.yaml
+postcss.config.js
+tailwind.config.ts
+tsconfig.json
