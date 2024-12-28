@@ -1,4 +1,4 @@
-import styles from 'bundle-text:./Menu.components.css'
+import styles from './Menu.components.css'
 
 import plugin from 'tailwindcss/plugin'
 

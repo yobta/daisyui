@@ -17,6 +17,12 @@ importers:
       daisyui:
         specifier: ^4.12.23
         version: 4.12.23(postcss@8.4.49)
+      postcss:
+        specifier: ^8.4.49
+        version: 8.4.49
+      postcss-js:
+        specifier: ^4.0.1
+        version: 4.0.1(postcss@8.4.49)
       tailwindcss:
         specifier: ^3.4.17
         version: 3.4.17
@@ -39,8 +45,14 @@ importers:
       '@parcel/transformer-css':
         specifier: ^2.13.3
         version: 2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.15))
+      '@parcel/transformer-inline':
+        specifier: ^2.13.3
+        version: 2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.15))
       '@parcel/transformer-inline-string':
         specifier: 2.13.3
+        version: 2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.15))
+      '@parcel/transformer-json':
+        specifier: ^2.13.3
         version: 2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.15))
       '@parcel/transformer-postcss':
         specifier: ^2.13.3
@@ -69,15 +81,9 @@ importers:
       parcel-resolver-default:
         specifier: ^0.0.0
         version: 0.0.0
-      postcss:
-        specifier: ^8.4.49
-        version: 8.4.49
       postcss-import:
         specifier: ^16.1.0
         version: 16.1.0(postcss@8.4.49)
-      postcss-js:
-        specifier: ^4.0.1
-        version: 4.0.1(postcss@8.4.49)
       typescript:
         specifier: ^5.7.2
         version: 5.7.2
@@ -460,6 +466,10 @@ packages:
 
   '@parcel/transformer-inline-string@2.13.3':
     resolution: {integrity: sha512-xxFCpY9NKJJ05tECb6nYjswAg0SDccuVeGTuNNXBOSMT2UPSAFZdjVYLjXOiKV417ffJ36ZqLkHDluxNoN++yA==}
+    engines: {node: '>= 16.0.0', parcel: ^2.13.3}
+
+  '@parcel/transformer-inline@2.13.3':
+    resolution: {integrity: sha512-Q9Di8XulZOMawTpnm4u/fJOUJ/yBqwO0qKL1S1Fk40Q5GRfbNduxvYl/+oHnSv/fxFCu84FjRbFSTfqFuBwMNQ==}
     engines: {node: '>= 16.0.0', parcel: ^2.13.3}
 
   '@parcel/transformer-js@2.13.3':
@@ -2855,6 +2865,12 @@ snapshots:
       nullthrows: 1.1.1
 
   '@parcel/transformer-inline-string@2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.15))':
+    dependencies:
+      '@parcel/plugin': 2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.15))
+    transitivePeerDependencies:
+      - '@parcel/core'
+
+  '@parcel/transformer-inline@2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.15))':
     dependencies:
       '@parcel/plugin': 2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.15))
     transitivePeerDependencies:
