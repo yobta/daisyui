@@ -15,7 +15,7 @@
     "prebuild": "npm run clear",
     "build": "parcel build",
     "predev": "npm run clear",
-    "dev": "parcel watch src/index.ts src/**/*.css"
+    "dev": "parcel watch"
   },
   "author": "",
   "license": "ISC",
