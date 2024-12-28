@@ -21,7 +21,7 @@ import { themesPreset } from './themes/themesPreset.ts'
 import { togglePreset } from './Toggle/togglePreset.ts'
 import { viewSwitchlPreset } from './ViewSwitch/viewSwitchPreset.ts'
 
-export const uiPreset: Partial<Config> = {
+export const daisyPresetYobta: Partial<Config> = {
   plugins: [typographyPlugin],
   presets: [
     themesPreset,

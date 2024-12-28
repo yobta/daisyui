@@ -5,5 +5,10 @@
     "*.css": [
       "./src/_util/CssInJsTransformer/index.js"
     ]
+  },
+  "validators": {
+    "*.{ts,tsx}": [
+      "@parcel/validator-typescript"
+    ]
   }
 }

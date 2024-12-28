@@ -60,6 +60,9 @@ importers:
       '@parcel/transformer-typescript-types':
         specifier: 2.13.3
         version: 2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.15))(typescript@5.7.2)
+      '@parcel/validator-typescript':
+        specifier: ^2.13.3
+        version: 2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.15))(typescript@5.7.2)
       '@types/node':
         specifier: ^22.10.2
         version: 22.10.2
@@ -523,6 +526,12 @@ packages:
   '@parcel/utils@2.13.3':
     resolution: {integrity: sha512-yxY9xw2wOUlJaScOXYZmMGoZ4Ck4Kqj+p6Koe5kLkkWM1j98Q0Dj2tf/mNvZi4yrdnlm+dclCwNRnuE8Q9D+pw==}
     engines: {node: '>= 16.0.0'}
+
+  '@parcel/validator-typescript@2.13.3':
+    resolution: {integrity: sha512-8ps1iieY6noyLahnlGOwHQCcABVmRqw9t3UX2puyJLLHOB1JMrbQq7jB63pbaJmARDTw0WGywpZsMnp6Jj2krQ==}
+    engines: {node: '>= 16.0.0', parcel: ^2.13.3}
+    peerDependencies:
+      typescript: '>=3.0.0'
 
   '@parcel/watcher-android-arm64@2.5.0':
     resolution: {integrity: sha512-qlX4eS28bUcQCdribHkg/herLe+0A9RyYC+mm2PXpncit8z5b3nSqGVzMNR3CmtAOgRutiZ02eIJJgP/b1iEFQ==}
@@ -2991,6 +3000,17 @@ snapshots:
       '@parcel/source-map': 2.1.1
       chalk: 4.1.2
       nullthrows: 1.1.1
+
+  '@parcel/validator-typescript@2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.15))(typescript@5.7.2)':
+    dependencies:
+      '@parcel/diagnostic': 2.13.3
+      '@parcel/plugin': 2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.15))
+      '@parcel/ts-utils': 2.13.3(typescript@5.7.2)
+      '@parcel/types': 2.13.3(@parcel/core@2.13.3(@swc/helpers@0.5.15))
+      '@parcel/utils': 2.13.3
+      typescript: 5.7.2
+    transitivePeerDependencies:
+      - '@parcel/core'
 
   '@parcel/watcher-android-arm64@2.5.0':
     optional: true

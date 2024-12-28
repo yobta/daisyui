@@ -1,9 +1,10 @@
 {
-  "name": "@monial/ui",
+  "name": "@yobta/daisyui",
   "version": "0.0.1",
   "description": "",
   "engines": {
-    "node": ">=22"
+    "node": ">=22",
+    "pnpm": ">=9.3"
   },
   "scripts": {
     "clear": "rm -rf dist && rm -rf .parcel-cache",
@@ -12,16 +13,18 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "type-check": "tsc --noEmit",
     "watch": "parcel watch",
-    "prebuild": "npm run clear",
+    "prebuild": "pnpm run clear",
     "build": "parcel build",
-    "predev": "npm run clear",
+    "postbuild": "pnpm run build:ts",
+    "build:ts": "tsc",
     "dev": "parcel watch"
   },
   "author": "",
   "license": "ISC",
   "module": "dist/index.js",
   "type": "module",
-  "types": "dist/types.d.ts",
+  "source": "src/index.ts",
+  "types": "dist/index.d.ts",
   "exports": {
     ".": "./dist/index.js",
     "./package.json": "./package.json"
@@ -50,6 +53,7 @@
     "@parcel/transformer-json": "^2.13.3",
     "@parcel/transformer-postcss": "^2.13.3",
     "@parcel/transformer-typescript-types": "2.13.3",
+    "@parcel/validator-typescript": "^2.13.3",
     "@types/node": "^22.10.2",
     "@types/postcss-js": "^4.0.4",
     "autoprefixer": "^10.4.20",
